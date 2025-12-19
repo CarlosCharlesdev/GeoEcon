@@ -10,6 +10,7 @@ geolocator = Nominatim(user_agent="geoecon")
 df = pd.read_excel("planilha_limpa.xlsx", header=None)
 
 pontos = []
+erros = []  # ← LISTA DE ERROS
 
 def normalizar(texto):
     if not isinstance(texto, str):
@@ -30,7 +31,10 @@ def normalizar(texto):
     texto = re.sub(r"\s+", " ", texto)
     return texto
 
-for _, row in df.iterrows():
+
+for index, row in df.iterrows():
+    linha_excel = index + 1  # mesma linha do Excel
+
     rua = normalizar(row[0])
     numero = row[1]
     bairro = normalizar(row[2])
@@ -44,12 +48,14 @@ for _, row in df.iterrows():
     ]
 
     location = None
+    endereco_usado = ""
 
     for endereco in tentativas:
         try:
             location = geolocator.geocode(endereco, timeout=10)
             if location:
-                print("✅ OK:", endereco)
+                print(f"✅ OK (linha {linha_excel}):", endereco)
+                endereco_usado = endereco
                 break
         except Exception as e:
             print("Erro:", e)
@@ -57,6 +63,7 @@ for _, row in df.iterrows():
 
     if location:
         pontos.append({
+            "linha": linha_excel,
             "rua": rua,
             "numero": numero,
             "bairro": bairro,
@@ -65,11 +72,33 @@ for _, row in df.iterrows():
             "lng": location.longitude
         })
     else:
-        print("❌ Não encontrado:", rua, numero)
+        print(f"❌ ERRO (linha {linha_excel}):", rua, numero)
 
-    time.sleep(1)  # RESPEITA o Nominatim
+        erros.append({
+            "linha_excel": linha_excel,
+            "rua": row[0],
+            "numero": numero,
+            "bairro": row[2],
+            "cep": cep
+        })
+
+    time.sleep(1)  # respeita o Nominatim
+
+
+# =========================
+# SALVA OS ARQUIVOS
+# =========================
 
 with open("pontos.json", "w", encoding="utf-8") as f:
     json.dump(pontos, f, ensure_ascii=False, indent=2)
 
-print("✅ pontos.json gerado com sucesso")
+if erros:
+    df_erros = pd.DataFrame(erros)
+    df_erros.to_excel("enderecos_com_erro.xlsx", index=False)
+
+print("\n✅ pontos.json gerado com sucesso")
+print(f"📍 Total de pontos válidos: {len(pontos)}")
+print(f"⚠️ Total de erros: {len(erros)}")
+
+if erros:
+    print("🧾 Planilha 'enderecos_com_erro.xlsx' criada para correção manual")
