@@ -1,1 +1,714 @@
-[ { "rua": "Avenida Carlos Gomes ", "numero": 756, "bairro": "Centro", "cep": 76801000, "lat": -8.7607385, "lng": -63.9003416 }, { "rua": "Rua Santos Dumont ", "numero": 76, "bairro": "Caiari", "cep": 76801000, "lat": -8.7613368, "lng": -63.9080989 }, { "rua": "Rua Major Amarante", "numero": 61, "bairro": "Centro", "cep": 76801004, "lat": -8.7614568, "lng": -63.911267 } ]
+[
+  {
+    "rua": "RUA",
+    "numero": "Numero",
+    "bairro": "BAIRRO",
+    "cep": "CEP",
+    "lat": -8.673004,
+    "lng": -63.9930113
+  },
+  {
+    "rua": "AVENIDA PINHEIRO MACHADO",
+    "numero": 703,
+    "bairro": "SAO CRISTOVAO",
+    "cep": 76801016,
+    "lat": -8.7569329,
+    "lng": -63.8929072
+  },
+  {
+    "rua": "AVENIDA 7 DE SETEMBRO",
+    "numero": 1150,
+    "bairro": "CENTRO",
+    "cep": 76801097,
+    "lat": -8.7658232,
+    "lng": -63.9077724
+  },
+  {
+    "rua": "AVENIDA CAMPOS SALES",
+    "numero": 934,
+    "bairro": "CENTRO",
+    "cep": 76801081,
+    "lat": -8.7638089,
+    "lng": -63.901557
+  },
+  {
+    "rua": "AVENIDA CAMPOS SALES",
+    "numero": 2174,
+    "bairro": "CENTRO",
+    "cep": 76801081,
+    "lat": -8.7638089,
+    "lng": -63.901557
+  },
+  {
+    "rua": "AVENIDA CAMPOS SALES",
+    "numero": 2420,
+    "bairro": "CENTRO",
+    "cep": 76801090,
+    "lat": -8.7574029,
+    "lng": -63.902923
+  },
+  {
+    "rua": "AVENIDA CAMPOS SALES",
+    "numero": 2665,
+    "bairro": "CENTRO",
+    "cep": 76801119,
+    "lat": -8.7574029,
+    "lng": -63.902923
+  },
+  {
+    "rua": "AVENIDA CAMPOS SALES",
+    "numero": 2677,
+    "bairro": "CENTRO",
+    "cep": 76801119,
+    "lat": -8.7638089,
+    "lng": -63.901557
+  },
+  {
+    "rua": "AVENIDA CAMPOS SALES",
+    "numero": 2805,
+    "bairro": "CENTRO",
+    "cep": 76801119,
+    "lat": -8.7638089,
+    "lng": -63.901557
+  },
+  {
+    "rua": "AVENIDA CARLOS GOMES",
+    "numero": 756,
+    "bairro": "CAIARI",
+    "cep": 76801150,
+    "lat": -8.7619989,
+    "lng": -63.9060043
+  },
+  {
+    "rua": "AVENIDA CARLOS GOMES",
+    "numero": 756,
+    "bairro": "CENTRO",
+    "cep": 76801000,
+    "lat": -8.7607385,
+    "lng": -63.9003416
+  },
+  {
+    "rua": "AVENIDA CARLOS GOMES",
+    "numero": 756,
+    "bairro": "SAO CRISTOVAO",
+    "cep": 76801150,
+    "lat": -8.7590418,
+    "lng": -63.8924431
+  },
+  {
+    "rua": "AVENIDA CARLOS GOMES",
+    "numero": 756,
+    "bairro": "SAO CRISTOVAO",
+    "cep": 76801150,
+    "lat": -8.7590418,
+    "lng": -63.8924431
+  },
+  {
+    "rua": "AVENIDA CARLOS GOMES",
+    "numero": 1618,
+    "bairro": "CENTRO",
+    "cep": 76801109,
+    "lat": -8.7607385,
+    "lng": -63.9003416
+  },
+  {
+    "rua": "AVENIDA FARQUAR",
+    "numero": 1066,
+    "bairro": "CENTRO",
+    "cep": 76801020,
+    "lat": -8.7674508,
+    "lng": -63.9077463
+  },
+  {
+    "rua": "AVENIDA FARQUAR",
+    "numero": 1642,
+    "bairro": "CAIARI",
+    "cep": 76801168,
+    "lat": -8.762058,
+    "lng": -63.9089076
+  },
+  {
+    "rua": "AVENIDA PINHEIRO MACHADO",
+    "numero": 808,
+    "bairro": "CAIARI",
+    "cep": 76801142,
+    "lat": -8.7597385,
+    "lng": -63.9058495
+  },
+  {
+    "rua": "AVENIDA PINHEIRO MACHADO",
+    "numero": 1016,
+    "bairro": "CENTRO",
+    "cep": 76801128,
+    "lat": -8.7586967,
+    "lng": -63.9011192
+  },
+  {
+    "rua": "AVENIDA PRESIDENTE DUTRA",
+    "numero": 633,
+    "bairro": "CENTRO",
+    "cep": 76801157,
+    "lat": -8.7578391,
+    "lng": -63.9074817
+  },
+  {
+    "rua": "AVENIDA PRESIDENTE DUTRA",
+    "numero": 3314,
+    "bairro": "CAIARI",
+    "cep": 76801157,
+    "lat": -8.7578391,
+    "lng": -63.9074817
+  },
+  {
+    "rua": "AVENIDA RIO MADEIRA",
+    "numero": 1248,
+    "bairro": "AGENORUA DE CARVALHO",
+    "cep": 76801020,
+    "lat": -8.7374379,
+    "lng": -63.8787104
+  },
+  {
+    "rua": "AVENIDA ROGERIO WEBER",
+    "numero": 1867,
+    "bairro": "CENTRO",
+    "cep": 76801030,
+    "lat": -8.7472431,
+    "lng": -63.9103326
+  },
+  {
+    "rua": "AVENIDA ROGERIO WEBER",
+    "numero": 2158,
+    "bairro": "CENTRO",
+    "cep": 76801058,
+    "lat": -8.7472431,
+    "lng": -63.9103326
+  },
+  {
+    "rua": "AVENIDA ROGERIO WEBER",
+    "numero": 2473,
+    "bairro": "CAIARI",
+    "cep": 76801160,
+    "lat": -8.7472431,
+    "lng": -63.9103326
+  },
+  {
+    "rua": "AVENIDA SETE DE SETEMBRO",
+    "numero": 153,
+    "bairro": "CENTRO",
+    "cep": 76801084,
+    "lat": -8.7632637,
+    "lng": -63.8960364
+  },
+  {
+    "rua": "AVENIDA SETE DE SETEMBRO",
+    "numero": 596,
+    "bairro": "CENTRO",
+    "cep": 76801028,
+    "lat": -8.7658232,
+    "lng": -63.9077724
+  },
+  {
+    "rua": "AVENIDA SETE DE SETEMBRO",
+    "numero": 700,
+    "bairro": "CENTRO",
+    "cep": 76801084,
+    "lat": -8.7658232,
+    "lng": -63.9077724
+  },
+  {
+    "rua": "AVENIDA SETE DE SETEMBRO",
+    "numero": 934,
+    "bairro": "CENTRO",
+    "cep": 76801084,
+    "lat": -8.7658232,
+    "lng": -63.9077724
+  },
+  {
+    "rua": "AVENIDA SETE DE SETEMBRO",
+    "numero": 1111,
+    "bairro": "CENTRO",
+    "cep": 76801097,
+    "lat": -8.7632637,
+    "lng": -63.8960364
+  },
+  {
+    "rua": "AVENIDA SETE DE SETEMBRO",
+    "numero": 1160,
+    "bairro": "CENTRO",
+    "cep": 76801096,
+    "lat": -8.7658232,
+    "lng": -63.9077724
+  },
+  {
+    "rua": "BARBADOS",
+    "numero": 4669,
+    "bairro": "EMBRATEL",
+    "cep": 76801109,
+    "lat": -8.7498399,
+    "lng": -63.8777726
+  },
+  {
+    "rua": "GENERAL OSORIO",
+    "numero": 153,
+    "bairro": "CENTRO",
+    "cep": 76801084,
+    "lat": -8.7658619,
+    "lng": -63.9030206
+  },
+  {
+    "rua": "JACY PARANA",
+    "numero": 2788,
+    "bairro": "MATO GROSSO OU NOSSA SENHORA DAS GRACAS",
+    "cep": 76801084,
+    "lat": -8.7648814,
+    "lng": -63.8790142
+  },
+  {
+    "rua": "JACY PARANA",
+    "numero": 2798,
+    "bairro": "MATO GROSSO OU NOSSA SENHORA DAS GRACAS",
+    "cep": 76801084,
+    "lat": -8.7648814,
+    "lng": -63.8790142
+  },
+  {
+    "rua": "LAURO SODRE",
+    "numero": 2441,
+    "bairro": "SAO JOAO BOSCO",
+    "cep": 76801150,
+    "lat": -8.7477701,
+    "lng": -63.9036179
+  },
+  {
+    "rua": "PINHEIRO MACHADO",
+    "numero": 703,
+    "bairro": "SAO CRISTOVAO",
+    "cep": 76801016,
+    "lat": -8.7569329,
+    "lng": -63.8929072
+  },
+  {
+    "rua": "RIO MADEIRA",
+    "numero": 1618,
+    "bairro": "CENTRO",
+    "cep": 76801109,
+    "lat": -8.7358293,
+    "lng": -63.8722077
+  },
+  {
+    "rua": "RUA AFONSO PENA",
+    "numero": 28,
+    "bairro": "CENTRO",
+    "cep": 76801080,
+    "lat": -8.7616673,
+    "lng": -63.8945378
+  },
+  {
+    "rua": "RUA AFONSO PENA",
+    "numero": 78,
+    "bairro": "CENTRO",
+    "cep": 76801080,
+    "lat": -8.7616673,
+    "lng": -63.8945378
+  },
+  {
+    "rua": "RUA AFONSO PENA",
+    "numero": 239,
+    "bairro": "CENTRO",
+    "cep": 76801100,
+    "lat": -8.7616673,
+    "lng": -63.8945378
+  },
+  {
+    "rua": "RUA AFONSO PENA",
+    "numero": 272,
+    "bairro": "CENTRO",
+    "cep": 76801100,
+    "lat": -8.7616673,
+    "lng": -63.8945378
+  },
+  {
+    "rua": "RUA AFONSO PENA",
+    "numero": 981,
+    "bairro": "CENTRO",
+    "cep": 76801040,
+    "lat": -8.7616673,
+    "lng": -63.8945378
+  },
+  {
+    "rua": "RUA ALEXANDRE GUIMARAES",
+    "numero": 2248,
+    "bairro": "MATO GROSSO",
+    "cep": 76801172,
+    "lat": -8.7707758,
+    "lng": -63.8900899
+  },
+  {
+    "rua": "RUA ALMIRANTE BARROSO",
+    "numero": 963,
+    "bairro": "CENTRO",
+    "cep": 76801091,
+    "lat": -8.7668623,
+    "lng": -63.9025657
+  },
+  {
+    "rua": "RUA BENJAMIN CONSTANT",
+    "numero": 2377,
+    "bairro": "CENTRO",
+    "cep": 76801056,
+    "lat": -8.7538835,
+    "lng": -63.8880162
+  },
+  {
+    "rua": "RUA DOM PEDRO II",
+    "numero": 703,
+    "bairro": "CENTRO",
+    "cep": 76801016,
+    "lat": -8.7619742,
+    "lng": -63.9008391
+  },
+  {
+    "rua": "RUA DOM PEDRO II",
+    "numero": 1192,
+    "bairro": "CENTRO",
+    "cep": 76801102,
+    "lat": -8.7619742,
+    "lng": -63.9008391
+  },
+  {
+    "rua": "RUA DOM PEDRO II",
+    "numero": 2032,
+    "bairro": "CENTRO",
+    "cep": 76801116,
+    "lat": -8.7619742,
+    "lng": -63.9008391
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 247,
+    "bairro": "CENTRO",
+    "cep": 76801006,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 987,
+    "bairro": "CAIARI",
+    "cep": 76801146,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 987,
+    "bairro": "CENTRO",
+    "cep": 76801126,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 988,
+    "bairro": "CENTRO",
+    "cep": 76801126,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 998,
+    "bairro": "CENTRO",
+    "cep": 76801126,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 1350,
+    "bairro": "CENTRO",
+    "cep": 76801110,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 1351,
+    "bairro": "CENTRO",
+    "cep": 76801110,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 1360,
+    "bairro": "CENTRO",
+    "cep": 76801110,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA DUQUE DE CAXIAS",
+    "numero": 1469,
+    "bairro": "CENTRO",
+    "cep": 76801110,
+    "lat": -8.759315,
+    "lng": -63.8988826
+  },
+  {
+    "rua": "RUA GENERAL OSORIO",
+    "numero": 91,
+    "bairro": "CENTRO",
+    "cep": 76801086,
+    "lat": -8.7658619,
+    "lng": -63.9030206
+  },
+  {
+    "rua": "RUA GENERAL OSORIO",
+    "numero": 111,
+    "bairro": "CENTRO",
+    "cep": 76801086,
+    "lat": -8.7658619,
+    "lng": -63.9030206
+  },
+  {
+    "rua": "RUA GENERAL OSORIO",
+    "numero": 223,
+    "bairro": "CENTRO",
+    "cep": 76801086,
+    "lat": -8.7658619,
+    "lng": -63.9030206
+  },
+  {
+    "rua": "RUA JOSE BONIFACIO",
+    "numero": 495,
+    "bairro": "CAIARI",
+    "cep": 76801144,
+    "lat": -8.7582791,
+    "lng": -63.9053368
+  },
+  {
+    "rua": "RUA JOSE BONIFACIO",
+    "numero": 663,
+    "bairro": "CAIARI",
+    "cep": 76801144,
+    "lat": -8.7582791,
+    "lng": -63.9053368
+  },
+  {
+    "rua": "RUA JOSE BONIFACIO",
+    "numero": 689,
+    "bairro": "CAIARI",
+    "cep": 76801144,
+    "lat": -8.7582791,
+    "lng": -63.9053368
+  },
+  {
+    "rua": "RUA JOSE BONIFACIO",
+    "numero": 3805,
+    "bairro": "CAIARI",
+    "cep": 76801144,
+    "lat": -8.7582791,
+    "lng": -63.9053368
+  },
+  {
+    "rua": "RUA JOSE DE ALENCAR",
+    "numero": 2381,
+    "bairro": "CENTRO",
+    "cep": 76801036,
+    "lat": -8.7630216,
+    "lng": -63.9057949
+  },
+  {
+    "rua": "RUA JOSE DO PATROCINIO",
+    "numero": 511,
+    "bairro": "CENTRO",
+    "cep": 76801050,
+    "lat": -8.7635689,
+    "lng": -63.9044232
+  },
+  {
+    "rua": "RUA JOSE DO PATROCINIO",
+    "numero": 706,
+    "bairro": "CENTRO",
+    "cep": 76801068,
+    "lat": -8.7635689,
+    "lng": -63.9044232
+  },
+  {
+    "rua": "RUA JULIO DE CASTILHO",
+    "numero": 149,
+    "bairro": "CENTRO",
+    "cep": 76801078,
+    "lat": -8.7618718,
+    "lng": -63.9026756
+  },
+  {
+    "rua": "RUA JULIO DE CASTILHO",
+    "numero": 199,
+    "bairro": "CENTRO",
+    "cep": 76801078,
+    "lat": -8.7618718,
+    "lng": -63.9026756
+  },
+  {
+    "rua": "RUA JULIO DE CASTILHO",
+    "numero": 242,
+    "bairro": "CENTRO",
+    "cep": 76801078,
+    "lat": -8.7618718,
+    "lng": -63.9026756
+  },
+  {
+    "rua": "RUA JULIO DE CASTILHO",
+    "numero": 252,
+    "bairro": "CENTRO",
+    "cep": 76801078,
+    "lat": -8.7618718,
+    "lng": -63.9026756
+  },
+  {
+    "rua": "RUA JULIO DE CASTILHO",
+    "numero": 489,
+    "bairro": "CENTRO",
+    "cep": 76801130,
+    "lat": -8.7618718,
+    "lng": -63.9026756
+  },
+  {
+    "rua": "RUA JULIO DE CASTILHO",
+    "numero": 772,
+    "bairro": "CENTRO",
+    "cep": 76801130,
+    "lat": -8.7618718,
+    "lng": -63.9026756
+  },
+  {
+    "rua": "RUA MARCOS AURELIO GUSMAN",
+    "numero": 219,
+    "bairro": "ARIGOLANDIA",
+    "cep": 76801178,
+    "lat": -8.759754,
+    "lng": -63.9110796
+  },
+  {
+    "rua": "RUA MARECHAL DEODORO",
+    "numero": 1947,
+    "bairro": "CENTRO",
+    "cep": 76801098,
+    "lat": -8.7646729,
+    "lng": -63.8987425
+  },
+  {
+    "rua": "RUA MARECHAL DEODORO",
+    "numero": 2460,
+    "bairro": "CENTRO",
+    "cep": 76801106,
+    "lat": -8.7632479,
+    "lng": -63.8989915
+  },
+  {
+    "rua": "RUA MARECHAL DEODORO",
+    "numero": 2576,
+    "bairro": "CENTRO",
+    "cep": 76801106,
+    "lat": -8.7632479,
+    "lng": -63.8989915
+  },
+  {
+    "rua": "RUA MARECHAL DEODORO",
+    "numero": 2622,
+    "bairro": "CENTRO",
+    "cep": 76801106,
+    "lat": -8.7632479,
+    "lng": -63.8989915
+  },
+  {
+    "rua": "RUA MARECHAL DEODORO",
+    "numero": 2711,
+    "bairro": "CENTRO",
+    "cep": 76801106,
+    "lat": -8.7632479,
+    "lng": -63.8989915
+  },
+  {
+    "rua": "RUA PAULO LEAL",
+    "numero": 444,
+    "bairro": "CENTRO",
+    "cep": 76801094,
+    "lat": -8.7651722,
+    "lng": -63.8998585
+  },
+  {
+    "rua": "RUA PAULO LEAL",
+    "numero": 611,
+    "bairro": "CENTRO",
+    "cep": 76801094,
+    "lat": -8.7651722,
+    "lng": -63.8998585
+  },
+  {
+    "rua": "RUA PONTO COQUEIRO",
+    "numero": 6869,
+    "bairro": "TRES MARIAS",
+    "cep": 76801080,
+    "lat": -8.7788075,
+    "lng": -63.8490813
+  },
+  {
+    "rua": "RUA RIACHUELO",
+    "numero": 186,
+    "bairro": "CENTRO",
+    "cep": 76801038,
+    "lat": -8.7663242,
+    "lng": -63.9050648
+  },
+  {
+    "rua": "RUA RUI BARBOSA",
+    "numero": 409,
+    "bairro": "CENTRO",
+    "cep": 76801010,
+    "lat": -8.763407,
+    "lng": -63.9100105
+  },
+  {
+    "rua": "RUA SANTOS DUMONT",
+    "numero": 76,
+    "bairro": "CAIARI",
+    "cep": 76801172,
+    "lat": -8.7613368,
+    "lng": -63.9080989
+  },
+  {
+    "rua": "RUA SANTOS DUMONT",
+    "numero": 615,
+    "bairro": "OLARIA",
+    "cep": 76801157,
+    "lat": -8.7564972,
+    "lng": -63.9091189
+  },
+  {
+    "rua": "RUA TENREIRO ARANHA",
+    "numero": 2435,
+    "bairro": "CENTRO",
+    "cep": 76801092,
+    "lat": -8.7603831,
+    "lng": -63.9012139
+  },
+  {
+    "rua": "RUA TENREIRO ARANHA",
+    "numero": 2472,
+    "bairro": "CENTRO",
+    "cep": 76801114,
+    "lat": -8.7603831,
+    "lng": -63.9012139
+  },
+  {
+    "rua": "RUA TENREIRO ARANHA",
+    "numero": 2496,
+    "bairro": "CENTRO",
+    "cep": 76801114,
+    "lat": -8.7603831,
+    "lng": -63.9012139
+  }
+]
