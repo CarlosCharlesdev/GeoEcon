@@ -1,89 +1,75 @@
 import pandas as pd
-import requests
-import json
+from geopy.geocoders import Nominatim
 import time
-import os
+import json
+import re
+import unicodedata
 
-API_KEY = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImUwZmVlZjNhNjBhMDQwOWI5MWJlNDdiN2U2MDVlNTgwIiwiaCI6Im11cm11cjY0In0="
+geolocator = Nominatim(user_agent="geoecon")
 
-df = pd.read_excel("planilha_limpa.xlsx")
+df = pd.read_excel("planilha_limpa.xlsx", header=None)
 
-OUTPUT_FILE = "../pontos.json"
+pontos = []
 
-# Se já existir, carrega pra continuar
-if os.path.exists(OUTPUT_FILE):
-    with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-        try:
-            pontos = json.load(f)
-        except json.JSONDecodeError:
-            pontos = []
-else:
-    pontos = []
+def normalizar(texto):
+    if not isinstance(texto, str):
+        return ""
 
-enderecos_processados = {
-    f"{p['rua']}-{p['numero']}" for p in pontos
-}
+    texto = texto.strip().upper()
 
-print(f"🔁 Retomando. Já existem {len(pontos)} pontos salvos.")
+    texto = texto.replace("AV. ", "AVENIDA ")
+    texto = texto.replace("AV ", "AVENIDA ")
+    texto = texto.replace("R. ", "RUA ")
+    texto = texto.replace("R ", "RUA ")
+    texto = texto.replace("AL. ", "ALAMEDA ")
+    texto = texto.replace("TRAV. ", "TRAVESSA ")
+
+    texto = unicodedata.normalize("NFKD", texto)
+    texto = "".join(c for c in texto if not unicodedata.combining(c))
+
+    texto = re.sub(r"\s+", " ", texto)
+    return texto
 
 for _, row in df.iterrows():
-    chave = f"{row['Rua']}-{row['Numero']}"
+    rua = normalizar(row[0])
+    numero = row[1]
+    bairro = normalizar(row[2])
+    cep = row[3]
 
-    # Pula se já foi convertido
-    if chave in enderecos_processados:
-        continue
+    tentativas = [
+        f"{rua}, {numero}, {bairro}, Porto Velho - RO, {cep}",
+        f"{rua}, {numero}, Porto Velho - RO, {cep}",
+        f"{rua}, {numero}, Porto Velho - RO",
+        f"{rua}, Porto Velho - RO"
+    ]
 
-    endereco = f"{row['Rua']}, {row['Numero']}, Porto Velho - RO"
+    location = None
 
-    try:
-        url = "https://api.openrouteservice.org/geocode/search"
-        params = {
-            "api_key": API_KEY,
-            "text": endereco,
-            "size": 1
-        }
-
-        r = requests.get(url, params=params, timeout=10)
-
-        # RATE LIMIT / BLOQUEIO
-        if r.status_code in [401, 403, 429]:
-            print("🚨 LIMITE DA API ATINGIDO. Salvando e pausando...")
-            break
-
-        if r.status_code == 200:
-            data = r.json()
-            if data.get("features"):
-                coords = data["features"][0]["geometry"]["coordinates"]
-
-                ponto = {
-                    "rua": row["Rua"],
-                    "numero": int(row["Numero"]),
-                    "bairro": row["Bairro"],
-                    "cep": int(row["CEP"]),
-                    "pedidos": int(row["Pedidos"]),
-                    "lat": coords[1],
-                    "lng": coords[0]
-                }
-
-                pontos.append(ponto)
-                enderecos_processados.add(chave)
-
-                # 🔥 SALVA IMEDIATAMENTE
-                with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-                    json.dump(pontos, f, indent=2, ensure_ascii=False)
-
+    for endereco in tentativas:
+        try:
+            location = geolocator.geocode(endereco, timeout=10)
+            if location:
                 print("✅ OK:", endereco)
+                break
+        except Exception as e:
+            print("Erro:", e)
+            time.sleep(5)
 
-            else:
-                print("❌ Não encontrado:", endereco)
+    if location:
+        pontos.append({
+            "rua": rua,
+            "numero": numero,
+            "bairro": bairro,
+            "cep": cep,
+            "lat": location.latitude,
+            "lng": location.longitude
+        })
+    else:
+        print("❌ Não encontrado:", rua, numero)
 
-        else:
-            print("⚠️ Erro API:", r.status_code)
+    time.sleep(1)  # RESPEITA o Nominatim
 
-    except Exception as e:
-        print("❌ Erro inesperado:", e)
-        time.sleep(5)
+with open("pontos.json", "w", encoding="utf-8") as f:
+    json.dump(pontos, f, ensure_ascii=False, indent=2)
 
-    time.sleep(0.15)  # seguro pro ORS
-
-print("🏁 Conversão finalizada (ou pausada com segurança).")
+print("✅ pontos.json gerado com sucesso")

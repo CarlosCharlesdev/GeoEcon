@@ -1,13 +1,12 @@
 import pandas as pd
 
 # Lê o Excel SEM cabeçalho
-df = pd.read_excel("entrada.xlsx", header=None)
+df = pd.read_excel("planilha-teste.xlsx", header=None)
 
 # Renomeia colunas por posição
 df.columns = ["Rua", "Numero", "Bairro", "CEP"]
 
-# Remove linhas vazias
-df = df.dropna(subset=["Rua", "Numero", "Bairro", "CEP"])
+# Remove linhas vaziasdf = df.dropna(subset=["Rua", "Numero", "Bairro", "CEP"])
 
 # Padroniza textos
 df["Rua"] = df["Rua"].astype(str).str.strip().str.upper()

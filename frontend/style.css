@@ -1,0 +1,108 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+#topbar {
+  padding: 12px 20px;
+  background: #1e1e2f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#topbar h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+#topbar button {
+  background: #ff9800;
+  border: none;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#topbar button:hover {
+  background: #ffa726;
+}
+
+#map {
+  width: 100%;
+  height: calc(100% - 56px);
+}
+
+/* ===== MODAL ===== */
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 25px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content ul {
+  padding-left: 18px;
+}
+
+.alerta {
+  color: #b00000;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-actions button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancelar {
+  background: #ccc;
+}
+
+.confirmar {
+  background: #4caf50;
+  color: white;
+}
+
+.confirmar:hover {
+  background: #43a047;
+}
